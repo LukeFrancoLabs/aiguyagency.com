@@ -88,23 +88,6 @@ nav .cta:hover{background:var(--accent-hover);text-decoration:none}
 .compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:none}
 .compare-table tr:hover td{background:var(--surface2)}
 
-/* Pricing */
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:980px;margin:0 auto}
-.price-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:36px 32px;position:relative;transition:transform .15s,border-color .15s}
-.price-card:hover{transform:translateY(-4px)}
-.price-card.featured{border-color:var(--accent);box-shadow:0 4px 32px rgba(245,158,11,.12)}
-.price-card.featured::before{content:'Most Popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#0c0d12;padding:4px 16px;border-radius:20px;font-size:.75rem;font-weight:800;letter-spacing:.5px}
-.price-card .tier{font-size:.85rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
-.price-card .price{font-size:2.5rem;font-weight:900;margin-bottom:4px}
-.price-card .price small{font-size:1rem;font-weight:500;color:var(--muted)}
-.price-card .setup{font-size:.85rem;color:var(--muted2);margin-bottom:24px}
-.price-card ul{list-style:none;margin-bottom:28px}
-.price-card ul li{color:var(--muted);font-size:.92rem;padding:6px 0;padding-left:24px;position:relative}
-.price-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--accent);font-weight:700}
-.price-card ul li.muted{color:var(--muted2)}
-.price-card ul li.muted::before{content:'\2715';color:var(--muted2)}
-.price-card .btn{width:100%;text-align:center}
-
 /* Process */
 .process{padding:80px 0;background:var(--surface)}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;margin-top:40px}
@@ -153,7 +136,6 @@ footer .brand .badge{background:var(--accent);color:#0c0d12;padding:2px 6px;bord
 <a href="/" class="logo"><span class="badge">AI</span> Guy Agency</a>
 <ul id="menu">
 <li><a href="#services">Services</a></li>
-<li><a href="#pricing">Pricing</a></li>
 <li><a href="#process">How It Works</a></li>
 <li><a href="#contact">Contact</a></li>
 <li><a href="/privacy">Privacy</a></li>
@@ -230,12 +212,16 @@ footer .brand .badge{background:var(--accent);color:#0c0d12;padding:2px 6px;bord
 <div class="service-card">
 <span class="icon">&#9889;</span>
 <h3>Follow-Up Automation</h3>
-<p>Never lose a lead because you couldn't respond fast enough.</p>
+<p>Never lose a lead because you couldn't respond fast enough. Every lead gets followed up instantly and nurtured until they book — no manual work required.</p>
 <ul>
 <li>Instant lead response in minutes, not hours</li>
-<li>Automated follow-up sequences</li>
-<li>Pipeline tracking in your CRM</li>
+<li>Automated follow-up sequences (email + SMS)</li>
+<li>Pipeline tracking in your CRM — every lead accounted for</li>
 <li>Missed call recovery — auto-text every missed call</li>
+<li>Re-engagement campaigns for cold and stale leads</li>
+<li>Appointment reminders to reduce no-shows</li>
+<li>Review request automation after job completion</li>
+<li>Smart lead scoring — hottest leads flagged for priority contact</li>
 </ul>
 </div>
 <div class="service-card">
@@ -250,8 +236,20 @@ footer .brand .badge{background:var(--accent);color:#0c0d12;padding:2px 6px;bord
 <li>Manages scheduling, dispatch, and crew coordination</li>
 <li>Connects to any CRM via open API keys</li>
 </ul>
-<p style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);color:var(--accent);font-weight:600;font-size:.95rem">And this isn't just AI running on its own — I personally monitor every agent I build for you. Think of me as your AI Guy: a super-powered tech employee who actually keeps an eye on everything and makes sure it works.</p>
 </div>
+</div>
+</div>
+</section>
+
+<!-- The AI Guy -->
+<section class="section" id="ai-guy">
+<div class="wrap">
+<div class="section-head">
+<h2>Your AI Guy</h2>
+<p class="sub">Not just software — a real person watching your back.</p>
+</div>
+<div style="max-width:680px;margin:0 auto;text-align:center">
+<p style="font-size:1.15rem;line-height:1.7;color:var(--muted)">And this isn't just AI running on its own — I personally monitor every agent I build for you. Think of me as your AI Guy: a super-powered tech employee who actually keeps an eye on everything and makes sure it works.</p>
 </div>
 </div>
 </section>
@@ -283,56 +281,15 @@ footer .brand .badge{background:var(--accent);color:#0c0d12;padding:2px 6px;bord
 </div>
 </section>
 
-<!-- Pricing -->
-<section class="section" id="pricing">
+<!-- CTA -->
+<section class="section" id="cta">
 <div class="wrap">
 <div class="section-head">
-<h2>Simple, Honest Pricing</h2>
-<p class="sub">No hidden fees. No long-term contracts. Cancel anytime.</p>
+<h2>Let's Talk About Your Business</h2>
+<p class="sub">Every business is different. Book a free call and I'll show you exactly what AI automation can do for yours.</p>
 </div>
-<div class="pricing-grid">
-<div class="price-card">
-<div class="tier">Starter</div>
-<div class="price">$100<small>/mo</small></div>
-<div class="setup">$500 one-time setup</div>
-<ul>
-<li>5-page custom website</li>
-<li>Lead capture form + email/SMS alerts</li>
-<li>Google Business Profile optimization</li>
-<li>SSL + hosting included</li>
-<li>Monthly maintenance & updates</li>
-</ul>
-<a href="https://calendly.com/aiguyagency-info/consultation" class="btn btn-secondary" target="_blank" rel="noopener">Get Started</a>
-</div>
-<div class="price-card featured">
-<div class="tier">Professional</div>
-<div class="price">$200<small>/mo</small></div>
-<div class="setup">$1,000 one-time setup</div>
-<ul>
-<li>Everything in Starter</li>
-<li>Automated follow-up sequences</li>
-<li>Online booking/scheduling</li>
-<li>Review generation automation</li>
-<li>FB + Instagram management</li>
-<li>Social media lead scanner</li>
-</ul>
-<a href="https://calendly.com/aiguyagency-info/consultation" class="btn btn-primary" target="_blank" rel="noopener">Book a Call</a>
-</div>
-<div class="price-card">
-<div class="tier">Enterprise</div>
-<div class="price">$500<small>/mo</small></div>
-<div class="setup">$2,000 one-time setup</div>
-<ul>
-<li>Everything in Professional</li>
-<li>Custom AI chatbot (24/7)</li>
-<li>Custom CRM built for your business</li>
-<li>Commercial lead generation</li>
-<li>Crew scheduling & route optimization</li>
-<li>Google Ads management</li>
-<li>Priority support</li>
-</ul>
-<a href="https://calendly.com/aiguyagency-info/consultation" class="btn btn-secondary" target="_blank" rel="noopener">Book a Call</a>
-</div>
+<div style="text-align:center;margin-top:32px">
+<a href="https://calendly.com/aiguyagency-info/consultation" class="btn btn-primary" target="_blank" rel="noopener" style="font-size:1.1rem;padding:16px 40px">Book Your Free Call</a>
 </div>
 </div>
 </section>
@@ -402,9 +359,9 @@ footer .brand .badge{background:var(--accent);color:#0c0d12;padding:2px 6px;bord
 </select>
 <select name="package">
 <option value="">Interested in...</option>
-<option value="Starter ($100/mo)">Starter — Website + Lead Capture</option>
-<option value="Professional ($200/mo)">Professional — Full Automation</option>
-<option value="Enterprise ($500/mo)">Enterprise — Full AI Operating System</option>
+<option value="Lead Generation & Social Media">Lead Generation & Social Media</option>
+<option value="Follow-Up Automation">Follow-Up Automation</option>
+<option value="AI Business Operations">AI Business Operations</option>
 <option value="Not sure">Not sure — help me decide</option>
 </select>
 <label class="sms-label">
