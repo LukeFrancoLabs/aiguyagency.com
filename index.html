@@ -345,7 +345,7 @@ footer .brand .badge{background:var(--accent);color:#0c0d12;padding:2px 6px;bord
 <form class="contact-form" id="leadForm">
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Email Address" required>
-<input type="tel" name="phone" placeholder="Phone Number">
+<input type="tel" name="phone" id="phone" placeholder="Phone Number">
 <select name="service">
 <option value="">Select your trade...</option>
 <option value="Exterior Cleaning">Exterior Cleaning / Pressure Washing</option>
@@ -365,7 +365,7 @@ footer .brand .badge{background:var(--accent);color:#0c0d12;padding:2px 6px;bord
 <option value="Not sure">Not sure — help me decide</option>
 </select>
 <label class="sms-label">
-<input type="checkbox" name="sms_consent" value="yes">
+<input type="checkbox" name="sms_consent" id="smsConsent" value="yes">
 <span>I consent to receive SMS messages from AI Guy Agency about AI tools and services (1-4 msgs/month). Reply STOP to opt out, HELP for help. Msg&amp;data rates may apply. See <a href="/privacy" target="_blank">Privacy Policy</a> and <a href="/terms" target="_blank">Terms</a>.</span>
 </label>
 <textarea name="message" placeholder="Tell us about your business and what you need..."></textarea>
@@ -381,6 +381,7 @@ footer .brand .badge{background:var(--accent);color:#0c0d12;padding:2px 6px;bord
 <div>
 <div class="brand"><span class="badge">AI</span> Guy Agency</div>
 <p>&copy; 2026 AI Guy Agency. All rights reserved.</p>
+<p style="margin-top:4px">Contact: info&#64;aiguyagency.com &nbsp;|&nbsp; Reply STOP to opt out of SMS</p>
 </div>
 <ul class="links">
 <li><a href="/privacy">Privacy Policy</a></li>
@@ -395,6 +396,18 @@ footer .brand .badge{background:var(--accent);color:#0c0d12;padding:2px 6px;bord
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 <script>
+// SMS consent checkbox requires phone number
+var smsBox = document.getElementById('smsConsent');
+var phoneField = document.getElementById('phone');
+smsBox.addEventListener('change', function(){
+  phoneField.required = this.checked;
+  if(this.checked){
+    phoneField.placeholder = 'Phone Number (required for SMS)';
+  } else {
+    phoneField.placeholder = 'Phone Number';
+  }
+});
+
 document.getElementById('leadForm').addEventListener('submit', function(e){
 e.preventDefault();
 var form = this;
