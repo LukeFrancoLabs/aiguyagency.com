@@ -10,7 +10,7 @@
 
 [[redirects]]
   from = "/book"
-  to = "https://calendly.com/aiguyagency-info/consultation"
+  to = "https://aiga-thank-you.netlify.app/apply.html"
   status = 301
   force = true
 
