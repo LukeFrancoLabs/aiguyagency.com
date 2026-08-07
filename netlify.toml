@@ -10,7 +10,7 @@
 
 [[redirects]]
   from = "/book"
-  to = "https://aiga-thank-you.netlify.app/apply.html"
+  to = "https://landing-page-workflow.netlify.app/apply.html"
   status = 301
   force = true
 
